@@ -1,4 +1,4 @@
-Lingotek C# Example:
+Lingotek C# Example
 ========================
 This code example demonstrates how to send content up to Lingotek and download the resulting translations.
 
