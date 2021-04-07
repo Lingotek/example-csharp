@@ -193,10 +193,10 @@ public class Executable
 
         using (Lingotek lingotek = new Lingotek()
         {
-            Host = "https://cms.lingotek.com",
-                AccessToken = "b068b8d9-c35b-3139-9fe2-e22ee7998d9f",    // sandbox token
-                CommunityId = "f49c4fca-ff93-4f01-a03e-aa36ddb1f2b8",    // sandbox community
-                ProjectId = "103956f4-17cf-4d79-9d15-5f7b7a88dee2",    // sandbox project
+            Host = "https://myaccount.lingotek.com",
+                AccessToken = "a60555d7-e8c6-4fb6-b74b-8d008c425b85",    // sandbox token
+                CommunityId = "1a6ffb3d-68ba-425f-afa6-1037600a90ac",    // sandbox community
+                ProjectId = "8c9812ca-d47a-448e-809a-780dba4087a9",    // sandbox project
                 }) 
         {
             // Let's read a community info.

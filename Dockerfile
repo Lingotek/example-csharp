@@ -1,11 +1,9 @@
-FROM ubuntu:14.04
+FROM debian:stable-slim
 
-ENV BUILD_TIMESTAMP 20160214
+RUN apt-get update && apt-get install ca-certificates gnupg curl -y
+RUN curl https://download.mono-project.com/repo/xamarin.gpg | apt-key add -
 
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-
-RUN echo "deb http://download.mono-project.com/repo/debian wheezy/snapshots/4.2.2.30 main" > /etc/apt/sources.list.d/mono-xamarin.list
-
+RUN echo "deb https://download.mono-project.com/repo/debian stable-buster main" | tee /etc/apt/sources.list.d/mono-official-stable.list
 RUN apt-get update -qq \
 	&& apt-get install -y mono-mcs mono-devel ca-certificates-mono
 
